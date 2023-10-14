@@ -48,18 +48,24 @@ const card = (
         Sahit Mamidipaka
       </StyledTypography>
 
-      <ResizeableTextCard
-        width={140}
-        height={80}
-        text1={"$1560"}
-        text2={"Total: $9420"}
-      ></ResizeableTextCard>
-      <ResizeableTextCard
-        width={250}
-        height={80}
-        text1={"The Mark"}
-        text2={"Midtown"}
-      ></ResizeableTextCard>
+      <Grid container spacing={2} sx={{ justifyContent: "center" }}>
+        <Grid item xl={4}>
+          <ResizeableTextCard
+            width={180}
+            height={80}
+            text1={"$1560"}
+            text2={"Total: $9360"}
+          ></ResizeableTextCard>
+        </Grid>
+        <Grid item xl={8}>
+          <ResizeableTextCard
+            width={250}
+            height={80}
+            text1={"The Mark"}
+            text2={"Midtown"}
+          ></ResizeableTextCard>
+        </Grid>
+      </Grid>
     </CardContent>
     {/* <CardActions>
       <Button size="small">Learn More</Button>
