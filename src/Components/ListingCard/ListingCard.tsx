@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material";
-import Avatar from "./Avatar";
+import Avatar from "../Avatar";
 import Grid from "@mui/material/Grid";
 import TurnedInNotIcon from "@mui/icons-material/TurnedInNot";
 import CloseIcon from "@mui/icons-material/Close";
@@ -15,7 +15,7 @@ const StyledCard = styled(Card)({
   backgroundColor: "#333333",
   border: "1px solid #484747",
   width: "75%",
-  height: 360 // "100%"
+  height: 360, // "100%"
 });
 
 const StyledTypography = styled(Typography)({

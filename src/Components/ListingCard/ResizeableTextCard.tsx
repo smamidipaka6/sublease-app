@@ -1,4 +1,4 @@
-import * as React from "react";
+// import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -19,16 +19,16 @@ const BigText = styled(Typography)({
 });
 
 const SmallText = styled(Typography)({
-  color: "#FFFFFF",
+  color: "#898989",
   fontFamily: "Helvetica Neue",
   fontWeight: 400,
-  fontSize: 12,
+  fontSize: 10,
 });
 
 
 const ResizeableTextCard = ({ height, width, text1, text2 }: Props) => {
   return (
-    <Card sx={{ width, height, backgroundColor: "#000000", borderRadius: "12px", margin: "auto" }}>
+    <Card sx={{ width, height, backgroundColor: "#484747", borderRadius: "12px", margin: "auto" }}>
       <CardContent>
         <BigText variant="body1" color="text.primary">
           {text1}
