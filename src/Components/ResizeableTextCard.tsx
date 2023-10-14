@@ -2,25 +2,40 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material";
 
 interface Props {
-
   height: number;
   width: number;
   text1: string;
   text2: string;
 }
 
+const BigText = styled(Typography)({
+  color: "#FFFFFF",
+  fontFamily: "Helvetica Neue",
+  fontWeight: 400,
+  fontSize: 20
+});
+
+const SmallText = styled(Typography)({
+  color: "#FFFFFF",
+  fontFamily: "Helvetica Neue",
+  fontWeight: 400,
+  fontSize: 12,
+});
+
+
 const ResizeableTextCard = ({ height, width, text1, text2 }: Props) => {
   return (
-    <Card sx={{ width, height, margin: "auto" }}>
+    <Card sx={{ width, height, backgroundColor: "#000000", borderRadius: "12px", margin: "auto" }}>
       <CardContent>
-        <Typography variant="body1" color="text.primary">
+        <BigText variant="body1" color="text.primary">
           {text1}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
+        </BigText>
+        <SmallText variant="body2" color="text.secondary">
           {text2}
-        </Typography>
+        </SmallText>
       </CardContent>
     </Card>
   );
