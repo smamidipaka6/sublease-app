@@ -1,9 +1,7 @@
-import React from "react";
 import { styled } from "@mui/material";
-import { Card, CardContent, Typography, Avatar } from "@mui/material";
+import { Card, Typography } from "@mui/material";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 
 interface Props {
   // imageUrl: string;
