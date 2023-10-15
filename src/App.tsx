@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/map" element={<MapPage />} />
       </Routes>
+      <ListingCard></ListingCard>
     </>
     
   )

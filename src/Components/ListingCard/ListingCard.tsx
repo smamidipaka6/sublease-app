@@ -13,13 +13,12 @@ import GroupDesc from "./GroupDesc";
 import SizeAttribute from "./AttributeTags/SizeAttribute";
 import PeopleAttribute from "./AttributeTags/PeopleAttribute";
 import MaleGenderAttribute from "./AttributeTags/MaleGenderAttribute";
-import { Male } from "@mui/icons-material";
 
 const StyledCard = styled(Card)({
   borderRadius: "8px", // TODO: Edit this
   backgroundColor: "#333333",
   border: "1px solid #484747",
-  width: "75%",
+  width: 500,
   height: 360, // "100%"
 });
 
@@ -123,7 +122,7 @@ const card = (
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={5} sx={{ border: "" }}>
+          <Grid item xs={6.8} sx={{ width: "100%", paddingLeft: "36px", border: "" }}>
             <GroupDesc></GroupDesc>
           </Grid>
         </Grid>
