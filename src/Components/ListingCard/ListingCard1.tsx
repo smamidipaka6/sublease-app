@@ -4,7 +4,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material";
-import Avatar from "../Avatar";
+// import Avatar from "../Avatar";
+import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import TurnedInNotIcon from "@mui/icons-material/TurnedInNot";
 import CloseIcon from "@mui/icons-material/Close";
@@ -28,6 +29,14 @@ const StyledTypography = styled(Typography)({
   fontWeight: 400,
 });
 
+const GroupTypography = styled(Typography)({
+  color: "#FFFFFF",
+  fontFamily: "Helvetica Neue",
+  fontWeight: 400,
+  fontSize: 12,
+});
+
+
 const card = (
   <React.Fragment>
     <CardContent sx={{ margin: 0, padding: 0 }}>
@@ -42,7 +51,13 @@ const card = (
             <TurnedInNotIcon sx={{ color: "#FFFFFF" }}></TurnedInNotIcon>
           </Grid>
           <Grid item xs={10}>
-            <Avatar></Avatar>
+            <Avatar sx={{ width: 85, height: 85, mx: "auto", mt: 2 }}>
+              <img
+                src="./public/random1.jpg"
+                alt="Avatar"
+                style={{ width: "85px", height: "85px" }}
+              />
+            </Avatar>
           </Grid>
           <Grid item xs={1} sx={{ paddingTop: "12px" }}>
             <CloseIcon sx={{ color: "#FFFFFF" }}></CloseIcon>
@@ -51,7 +66,7 @@ const card = (
       </Box>
 
       <StyledTypography sx={{ mb: 1.5 }} color="text.secondary">
-        Sahit Mamidipaka
+        Kyle Gutheridge
       </StyledTypography>
 
       <Box sx={{ width: "100%", border: "" }}>
@@ -72,8 +87,8 @@ const card = (
             <ResizeableTextCard
               width={180}
               height={80}
-              text1={"$1200"}
-              text2={"Total: $7200"}
+              text1={"$1600"}
+              text2={"Total: $9600"}
             ></ResizeableTextCard>
           </Grid>
           <Grid
@@ -88,7 +103,7 @@ const card = (
             <ResizeableTextCard
               width={250}
               height={80}
-              text1={"The Mark"}
+              text1={"The Hub"}
               text2={"Midtown"}
             ></ResizeableTextCard>
           </Grid>
@@ -115,15 +130,27 @@ const card = (
                 <PeopleAttribute text="4"></PeopleAttribute>
               </Grid>
               <Grid item>
-                <SizeAttribute text="4x4"></SizeAttribute>
+                <SizeAttribute text="4x2"></SizeAttribute>
               </Grid>
               <Grid item>
                 <MaleGenderAttribute text="Male"></MaleGenderAttribute>
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={6.5} sx={{ width: "100%", paddingLeft: "36px", border: "" }}>
-            <GroupDesc></GroupDesc>
+          <Grid
+            item
+            xs={6.5}
+            sx={{ width: "100%", paddingLeft: "36px", border: "" }}
+          >
+            <GroupTypography>
+              <div style={{ textAlign: "left" }}>
+                &bull; We love playing video games <br />
+                &bull; We enjoy movie nights <br />
+                &bull; Love hosting friends frequently <br />
+                &bull; We binge shows all-night!
+                <br />
+              </div>
+            </GroupTypography>
           </Grid>
         </Grid>
       </Box>
@@ -135,7 +162,7 @@ const card = (
   </React.Fragment>
 );
 
-const ListingCard = () => {
+const ListingCard1 = () => {
   return (
     <Box sx={{ minWidth: 0 }}>
       <StyledCard variant="outlined" sx={{}}>
@@ -145,4 +172,4 @@ const ListingCard = () => {
   );
 };
 
-export default ListingCard;
+export default ListingCard1;

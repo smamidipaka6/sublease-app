@@ -29,68 +29,85 @@ export default function AccountMenu() {
 
   return (
     <React.Fragment>
-      <Box sx={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'space-between',
-          width: '100%',
-          position: 'fixed',
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+          position: "fixed",
           top: 10,
           left: 0,
           zIndex: 1000,
-      }}>
-        <Box sx={{ 
-          display: 'flex', 
-          alignItems: 'center',
-          alignContent: 'center',
-          pl:3
-        }}>
-          <Link to="/" style={{ textDecoration: 'none' }}>
-            <Typography variant="h4" component="div" sx={{ color: '#BBBBBB' }}>
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            alignContent: "center",
+            pl: 3,
+          }}
+        >
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Typography variant="h4" component="div" sx={{ color: "#BBBBBB" }}>
               HoneyComb
             </Typography>
           </Link>
         </Box>
 
-        <Box sx={{ 
-          display: 'flex', 
-          alignItems: 'center',
-        }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
           <Link to="/map">
             <Tooltip title="Map">
-                  <IconButton sx={{ mr: 2 }}>
-                      <MapOutlinedIcon fontSize="large" sx={{ color: '#BBBBBB' }} />
-                  </IconButton>
+              <IconButton sx={{ mr: 2 }}>
+                <MapOutlinedIcon fontSize="large" sx={{ color: "#BBBBBB" }} />
+              </IconButton>
             </Tooltip>
           </Link>
 
-          <Tooltip title="Bookmark">
-            <IconButton sx={{ mr: 2 }}>
-                <BookmarkBorderIcon fontSize="large" sx={{ color: '#BBBBBB' }} />
-            </IconButton>
-          </Tooltip>
+          <Link to="/bookmark">
+            <Tooltip title="Bookmark">
+              <IconButton sx={{ mr: 2 }}>
+                <BookmarkBorderIcon
+                  fontSize="large"
+                  sx={{ color: "#BBBBBB" }}
+                />
+              </IconButton>
+            </Tooltip>
+          </Link>
 
           <Tooltip title="Chat">
             <IconButton sx={{ mr: 2 }}>
-                <ChatBubbleOutlineOutlinedIcon fontSize="large" sx={{ color: '#BBBBBB' }} />
+              <ChatBubbleOutlineOutlinedIcon
+                fontSize="large"
+                sx={{ color: "#BBBBBB" }}
+              />
             </IconButton>
-          </Tooltip>        
+          </Tooltip>
 
           <Tooltip title="Account settings">
             <IconButton
               onClick={handleClick}
               size="small"
               sx={{ mr: 2 }}
-              aria-controls={open ? 'account-menu' : undefined}
+              aria-controls={open ? "account-menu" : undefined}
               aria-haspopup="true"
-              aria-expanded={open ? 'true' : undefined}
+              aria-expanded={open ? "true" : undefined}
             >
-              <AccountCircleOutlinedIcon fontSize="large" sx={{ color: '#BBBBBB' }} />
+              <AccountCircleOutlinedIcon
+                fontSize="large"
+                sx={{ color: "#BBBBBB" }}
+              />
             </IconButton>
           </Tooltip>
         </Box>
       </Box>
-      
+
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
@@ -100,31 +117,31 @@ export default function AccountMenu() {
         PaperProps={{
           elevation: 0,
           sx: {
-            overflow: 'visible',
-            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+            overflow: "visible",
+            filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
             mt: 1.5,
-            '& .MuiAvatar-root': {
+            "& .MuiAvatar-root": {
               width: 32,
               height: 32,
               ml: -0.5,
               mr: 1,
             },
-            '&:before': {
+            "&:before": {
               content: '""',
-              display: 'block',
-              position: 'absolute',
+              display: "block",
+              position: "absolute",
               top: 0,
               right: 14,
               width: 10,
               height: 10,
-              bgcolor: 'background.paper',
-              transform: 'translateY(-50%) rotate(45deg)',
+              bgcolor: "background.paper",
+              transform: "translateY(-50%) rotate(45deg)",
               zIndex: 0,
             },
           },
         }}
-        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+        transformOrigin={{ horizontal: "right", vertical: "top" }}
+        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem onClick={handleClose}>
           <Avatar /> Profile

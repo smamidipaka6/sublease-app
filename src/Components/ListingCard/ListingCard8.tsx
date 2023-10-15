@@ -4,7 +4,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material";
-import Avatar from "../Avatar";
+// import Avatar from "../Avatar";
+import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import TurnedInNotIcon from "@mui/icons-material/TurnedInNot";
 import CloseIcon from "@mui/icons-material/Close";
@@ -13,6 +14,7 @@ import GroupDesc from "./GroupDesc";
 import SizeAttribute from "./AttributeTags/SizeAttribute";
 import PeopleAttribute from "./AttributeTags/PeopleAttribute";
 import MaleGenderAttribute from "./AttributeTags/MaleGenderAttribute";
+import FemlaleGenderAttribute from "./AttributeTags/FemaleGenderAttribute";
 
 const StyledCard = styled(Card)({
   borderRadius: "8px", // TODO: Edit this
@@ -26,6 +28,13 @@ const StyledTypography = styled(Typography)({
   color: "#FFFFFF",
   fontFamily: "Helvetica Neue",
   fontWeight: 400,
+});
+
+const GroupTypography = styled(Typography)({
+  color: "#FFFFFF",
+  fontFamily: "Helvetica Neue",
+  fontWeight: 400,
+  fontSize: 12,
 });
 
 const card = (
@@ -42,7 +51,13 @@ const card = (
             <TurnedInNotIcon sx={{ color: "#FFFFFF" }}></TurnedInNotIcon>
           </Grid>
           <Grid item xs={10}>
-            <Avatar></Avatar>
+            <Avatar sx={{ width: 85, height: 85, mx: "auto", mt: 2 }}>
+              <img
+                src="./public/random8.jpeg"
+                alt="Avatar"
+                style={{ width: "85px", height: "85px" }}
+              />
+            </Avatar>
           </Grid>
           <Grid item xs={1} sx={{ paddingTop: "12px" }}>
             <CloseIcon sx={{ color: "#FFFFFF" }}></CloseIcon>
@@ -51,7 +66,7 @@ const card = (
       </Box>
 
       <StyledTypography sx={{ mb: 1.5 }} color="text.secondary">
-        Sahit Mamidipaka
+        Emily Philips
       </StyledTypography>
 
       <Box sx={{ width: "100%", border: "" }}>
@@ -72,8 +87,8 @@ const card = (
             <ResizeableTextCard
               width={180}
               height={80}
-              text1={"$1200"}
-              text2={"Total: $7200"}
+              text1={"$1250"}
+              text2={"Total: $7500"}
             ></ResizeableTextCard>
           </Grid>
           <Grid
@@ -88,7 +103,7 @@ const card = (
             <ResizeableTextCard
               width={250}
               height={80}
-              text1={"The Mark"}
+              text1={"UHouse"}
               text2={"Midtown"}
             ></ResizeableTextCard>
           </Grid>
@@ -112,18 +127,28 @@ const card = (
               sx={{ border: "", justifyContent: "space-evenly" }}
             >
               <Grid item>
-                <PeopleAttribute text="4"></PeopleAttribute>
+                <PeopleAttribute text="3"></PeopleAttribute>
               </Grid>
               <Grid item>
-                <SizeAttribute text="4x4"></SizeAttribute>
+                <SizeAttribute text="3x3"></SizeAttribute>
               </Grid>
               <Grid item>
-                <MaleGenderAttribute text="Male"></MaleGenderAttribute>
+                <FemlaleGenderAttribute text="Female"></FemlaleGenderAttribute>
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={6.5} sx={{ width: "100%", paddingLeft: "36px", border: "" }}>
-            <GroupDesc></GroupDesc>
+          <Grid
+            item
+            xs={6.5}
+            sx={{ width: "100%", paddingLeft: "36px", border: "" }}
+          >
+            <GroupTypography>
+              <div style={{ textAlign: "left" }}>
+                &bull; I, Emily, am a responsible and quiet roommate who values
+                a peaceful living environment.
+                <br />
+              </div>
+            </GroupTypography>
           </Grid>
         </Grid>
       </Box>
@@ -135,7 +160,7 @@ const card = (
   </React.Fragment>
 );
 
-const ListingCard = () => {
+const ListingCard8 = () => {
   return (
     <Box sx={{ minWidth: 0 }}>
       <StyledCard variant="outlined" sx={{}}>
@@ -145,4 +170,4 @@ const ListingCard = () => {
   );
 };
 
-export default ListingCard;
+export default ListingCard8;
