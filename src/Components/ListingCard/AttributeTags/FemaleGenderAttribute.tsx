@@ -53,7 +53,7 @@ const FemlaleGenderAttribute = ({ text }: Props) => {
           item
           xs={7.5}
           sx={{
-            paddingLeft: "4px",
+            paddingLeft: "0px",
             display: "flex",
             justifyContent: "left",
             alignItems: "center",
