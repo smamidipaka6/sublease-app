@@ -14,8 +14,16 @@ const GroupTypography = styled(Typography)({
 
 const GroupDesc = () => {
   return (
-    <GroupTypography>GroupDesc</GroupTypography>
-  )
+    <GroupTypography>
+      <div style={{ textAlign: "left" }}>
+        &bull; We love playing pool <br />
+        &bull; People are at our place post-midnight <br />
+        &bull; We cook and study together <br />
+        &bull; We're all outgoing and fun to be around (we swear)
+        <br />
+      </div>
+    </GroupTypography>
+  );
 }
 
 export default GroupDesc
