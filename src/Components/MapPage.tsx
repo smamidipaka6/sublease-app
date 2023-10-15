@@ -6,7 +6,8 @@ const MapPage = () => {
     return (
         <>
             <NavBar />
-            <h1>Map Page</h1>
+            
+
         </>
     );
 };
