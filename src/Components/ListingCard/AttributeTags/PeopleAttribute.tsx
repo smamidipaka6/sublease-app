@@ -16,7 +16,7 @@ const CardWrapper = styled(Card)({
   borderRadius: "50px",
   color: "#FFFFFF",
   padding: "0px",
-  width: "50px",
+  width: "35px",
   height: "20px"
 });
 
@@ -31,6 +31,7 @@ const CardText = styled(Typography)`
   color: #000;
   font-size: 8px;
   padding: 0px;
+  font-weight: bold;
   horizontal-align: middle; /* Align the text vertically */
   vertical-align: middle; /* Vertical alignment for centering */
 `;
@@ -47,14 +48,14 @@ const PeopleAttribute = ({ text }: Props) => {
           alignItems: "center"
         }}
       >
-        <Grid item xs={4.5}>
+        <Grid item xs={7}>
           <StyledIcon />
         </Grid>
         <Grid
           item
-          xs={7.5}
+          xs={5}
           sx={{
-            paddingLeft: "4px",
+            paddingLeft: "1px",
             display: "flex",
             justifyContent: "left",
             alignItems: "center"

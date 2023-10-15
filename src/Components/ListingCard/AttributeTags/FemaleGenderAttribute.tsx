@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@mui/material";
 import { Card, CardContent, Typography, Avatar } from "@mui/material";
-import WcOutlinedIcon from "@mui/icons-material/WcOutlined";
+import Woman2OutlinedIcon from "@mui/icons-material/Woman2Outlined";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
@@ -20,7 +20,7 @@ const CardWrapper = styled(Card)({
   height: "20px",
 });
 
-const StyledIcon = styled(WcOutlinedIcon)`
+const StyledIcon = styled(Woman2OutlinedIcon)`
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -36,7 +36,7 @@ const CardText = styled(Typography)`
   vertical-align: middle; /* Vertical alignment for centering */
 `;
 
-const BothGenderAttribute = ({ text }: Props) => {
+const FemlaleGenderAttribute = ({ text }: Props) => {
   return (
     <CardWrapper>
       <Grid
@@ -68,4 +68,4 @@ const BothGenderAttribute = ({ text }: Props) => {
   );
 };
 
-export default BothGenderAttribute;
+export default FemlaleGenderAttribute;

@@ -16,7 +16,7 @@ const CardWrapper = styled(Card)({
   borderRadius: "50px",
   color: "#FFFFFF",
   padding: "0px",
-  width: "50px",
+  width: "45px",
   height: "20px",
 });
 
@@ -31,6 +31,7 @@ const CardText = styled(Typography)`
   color: #000;
   font-size: 8px;
   padding: 0px;
+  font-weight: bold;
   horizontal-align: middle; /* Align the text vertically */
   vertical-align: middle; /* Vertical alignment for centering */
 `;
