@@ -1,24 +1,22 @@
 import "./App.css";
-import Home from './Components/HomePage';
-import Button from "./Components/Button";
-import GroupDesc from "./Components/ListingCard/GroupDesc";
+import Home from "./Pages/HomePage";
 import ListingCard from "./Components/ListingCard/ListingCard";
-import AttributeTag from "./Components/ListingCard/AttributeTags/PeopleAttribute"
-import MapPage from './Components/MapPage';
+import MapPage from "./Pages/MapPage";
+import { Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar"
-import { Route, Routes } from 'react-router-dom';
+import ExtendedView from "./Pages/ExtentedView";
 
 function App() {
   return (
     <>
+      <NavBar></NavBar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/map" element={<MapPage />} />
+        <Route path="/bookmark" element={<ExtendedView/>} />
       </Routes>
-      <ListingCard></ListingCard>
     </>
-    
-  )
+  );
 }
 
 export default App;
