@@ -28,7 +28,7 @@ const SmallText = styled(Typography)({
 
 const ResizeableTextCard = ({ height, width, text1, text2 }: Props) => {
   return (
-    <Card sx={{ width, height, backgroundColor: "#484747", borderRadius: "12px", margin: "auto" }}>
+    <Card sx={{ width, height, backgroundColor: "#484747", borderRadius: "12px", margin: "0" }}>
       <CardContent>
         <BigText variant="body1" color="text.primary">
           {text1}
