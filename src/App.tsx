@@ -7,10 +7,7 @@ import AttributeTag from "./Components/ListingCard/AttributeTags/PeopleAttribute
 function App() {
   return (
     <>
-      <GroupDesc></GroupDesc>
-      <AttributeTag text={"Hello"}></AttributeTag>
-      <h1>Hello World! Venusha is gay</h1>
-      <Button></Button>
+
       <ListingCard></ListingCard>
     </>
   );
