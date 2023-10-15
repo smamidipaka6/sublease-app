@@ -6,14 +6,16 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
+import Typography from '@mui/material/Typography';
 import Logout from '@mui/icons-material/Logout';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import MapOutlinedIcon from '@mui/icons-material/MapOutlined';
+import {Link} from "react-router-dom"
 
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -24,42 +26,71 @@ export default function AccountMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <React.Fragment>
       <Box sx={{ 
           display: 'flex', 
           alignItems: 'center', 
-          textAlign: 'center', 
-          justifyContent: 'flex-end',
-          width: '98%', // Ensuring it takes full width
-          position: 'fixed', // Making it stick at the top
-          top: 10, // Positioning it at the top
-          left: 0, // Positioning it to the left
-          zIndex: 1000, // Ensuring it stays above other content
+          justifyContent: 'space-between',
+          width: '100%',
+          position: 'fixed',
+          top: 10,
+          left: 0,
+          zIndex: 1000,
       }}>
-        <Tooltip title="Bookmark">
+        <Box sx={{ 
+          display: 'flex', 
+          alignItems: 'center',
+          alignContent: 'center',
+          pl:3
+        }}>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <Typography variant="h4" component="div" sx={{ color: '#BBBBBB' }}>
+              HoneyComb
+            </Typography>
+          </Link>
+        </Box>
+
+        <Box sx={{ 
+          display: 'flex', 
+          alignItems: 'center',
+        }}>
+          <Link to="/map">
+            <Tooltip title="Map">
+                  <IconButton sx={{ mr: 2 }}>
+                      <MapOutlinedIcon fontSize="large" sx={{ color: '#BBBBBB' }} />
+                  </IconButton>
+            </Tooltip>
+          </Link>
+
+          <Tooltip title="Bookmark">
             <IconButton sx={{ mr: 2 }}>
                 <BookmarkBorderIcon fontSize="large" sx={{ color: '#BBBBBB' }} />
             </IconButton>
-        </Tooltip>
-        <Tooltip title="Chat">
+          </Tooltip>
+
+          <Tooltip title="Chat">
             <IconButton sx={{ mr: 2 }}>
                 <ChatBubbleOutlineOutlinedIcon fontSize="large" sx={{ color: '#BBBBBB' }} />
             </IconButton>
-        </Tooltip>        
-        <Tooltip title="Account settings">
-          <IconButton
-            onClick={handleClick}
-            size="small"
-            sx={{mr: 2 }}
-            aria-controls={open ? 'account-menu' : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
-          >
-            <AccountCircleOutlinedIcon fontSize="large" sx={{ color: '#BBBBBB' }} />
-          </IconButton>
-        </Tooltip>
+          </Tooltip>        
+
+          <Tooltip title="Account settings">
+            <IconButton
+              onClick={handleClick}
+              size="small"
+              sx={{ mr: 2 }}
+              aria-controls={open ? 'account-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? 'true' : undefined}
+            >
+              <AccountCircleOutlinedIcon fontSize="large" sx={{ color: '#BBBBBB' }} />
+            </IconButton>
+          </Tooltip>
+        </Box>
       </Box>
+      
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
